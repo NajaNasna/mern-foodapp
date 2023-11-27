@@ -5,6 +5,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import Home from './Screens/Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './Screens/Login';
+import Signup from './Screens/Signup';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route exact path='/' element={<Home />} />
           <Route  path='/login' element={<Login/>}/>
+          <Route path='/createuser' element={<Signup/>}/>
         </Routes>
 
       </div>

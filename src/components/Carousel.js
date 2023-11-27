@@ -4,16 +4,16 @@ function Carousel() {
     return (
         <div>
 
-            <div id="carouselExampleFade" className="carousel slide carousel-fade">
-                <div className="carousel-inner">
+            <div id="carouselExampleFade" className="carousel slide carousel-fade " >
+                <div className="carousel-inner " id='carousel' >
                     <div className="carousel-caption bg-transparent" style={{zIndex:"10"}}>
                         <form className="form-inline bg-transparent">
-                            <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button className="btn btn-outline-success my-2 my-sm-0 " type="submit">Search</button>
+                          <input className="form-control mr-sm-2 " type="search" placeholder="Search" aria-label="Search" />
+                          <button className="btn btn-outline-success my-2 my-sm-0 " type="submit">Search</button>
                         </form>
                     </div>
                     <div className="carousel-item active">
-                        <img src="https://source.unsplash.com/random/300×300/?burger" className="d-block w-100" style={{filter:"brightness(30%)"}} alt="..." />
+                        <img src="https://source.unsplash.com/random/?burger" className="d-block w-100" style={{filter:"brightness(30%)"}} alt="..." />
                     </div>
                     <div className="carousel-item">
                         <img src="https://source.unsplash.com/random/300×300/?momos" className="d-block w-100" style={{filter:"brightness(30%)"}} alt="..." />

@@ -2,9 +2,12 @@
   background-color:rgb(29, 27, 27);
   color: white !important;
 }
-
-
-
+.card-img-top{
+  max-height: 250px;
+}
+#carousel{
+  max-height: 500px;
+}
 
 
 
