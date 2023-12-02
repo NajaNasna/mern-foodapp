@@ -6,9 +6,12 @@ import Home from './Screens/Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './Screens/Login';
 import Signup from './Screens/Signup';
+import { CartProvider } from './components/ContextReducer';
 
 function App() {
   return (
+    <CartProvider>
+
     <Router>
 
       <div className="App">
@@ -21,6 +24,7 @@ function App() {
       </div>
 
     </Router>
+    </CartProvider>
 
   );
 }

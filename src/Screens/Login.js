@@ -1,9 +1,9 @@
-import React,{useState} from 'react'
+import React,{useEffect, useRef, useState} from 'react'
 import { Link,useNavigate } from 'react-router-dom';
 
 function Login() {
 
-
+  const textInput = useRef(null)
   const[credentials,setCredentials]=useState({email:"",password:""})
   let navigate = useNavigate()
 
@@ -36,6 +36,10 @@ const handleSubmit = async(e) =>{
     setCredentials({...credentials,[event.target.name]:event.target.value})
   }
 
+  useEffect(()=>{
+   textInput.current.focus() 
+  },[])
+
 
   return (
     <div>
@@ -45,7 +49,7 @@ const handleSubmit = async(e) =>{
   <div className="form-group mt-5">
     <label htmlFor="exampleInputEmail1">Email address</label>
     <input type="email" className="form-control bg-dark" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"
-    name='email' value={credentials.email} onChange={onChange}/>
+    name='email' value={credentials.email} onChange={onChange} ref={textInput} autoComplete='off'/>
   </div>
   <div className="form-group mt-3">
     <label htmlFor="exampleInputPassword1">Password</label>

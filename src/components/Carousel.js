@@ -4,11 +4,11 @@ function Carousel() {
     return (
         <div>
 
-            <div id="carouselExampleFade" className="carousel slide carousel-fade " >
+            {/* <div id="carouselExampleFade" className="carousel slide carousel-fade " >
                 <div className="carousel-inner " id='carousel' >
                     <div className="carousel-caption bg-transparent" style={{zIndex:"10"}}>
                         <form className="form-inline bg-transparent">
-                          <input className="form-control mr-sm-2 " type="search" placeholder="Search" aria-label="Search" />
+                          <input className="form-control mr-sm-2 text-dark" type="search" placeholder="Search" aria-label="Search" />
                           <button className="btn btn-outline-success my-2 my-sm-0 " type="submit">Search</button>
                         </form>
                     </div>
@@ -30,46 +30,8 @@ function Carousel() {
                     <span className="carousel-control-next-icon" aria-hidden="true"></span>
                     <span className="visually-hidden">Next</span>
                 </button>
-            </div>
+            </div> */}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            {/* <div id="carouselExampleControls" classNameName="carousel slide" data-ride="carousel">
-  <div classNameName="carousel-inner">
-    <div classNameName="carousel-item active">
-      <img classNameName="d-block w-100" src="https://source.unsplash.com/random/300×300/?burger" alt="First slide"/>
-    </div>
-    <div classNameName="carousel-item">
-      <img classNameName="d-block w-100" src="https://source.unsplash.com/random/300×300/?momos" alt="Second slide"/>
-    </div>
-    <div classNameName="carousel-item">
-      <img classNameName="d-block w-100" src="https://source.unsplash.com/random/300×300/?pizza" alt="Third slide"/>
-    </div>
-  </div>
-  <a classNameName="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span classNameName="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span classNameName="sr-only">Previous</span>
-  </a>
-  <a classNameName="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span classNameName="carousel-control-next-icon" aria-hidden="true"></span>
-    <span classNameName="sr-only">Next</span>
-  </a>
-</div> */}
         </div>
     )
 }

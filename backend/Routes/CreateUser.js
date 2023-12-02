@@ -7,6 +7,7 @@ const bcrypt = require("bcryptjs")
 const jwtSecret = "Thisismyprojectandthisismytextstoredinthisvariable"
 
 
+
 router.post('/createuser',
     body('email', 'Enter a valid email').isEmail(),
     body('name').isLength({ min: 3 }),
@@ -30,6 +31,7 @@ router.post('/createuser',
                 location: req.body.location
             })
             res.json({ success: true });
+     
 
         } catch (error) {
             console.log(error)
