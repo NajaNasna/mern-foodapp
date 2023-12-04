@@ -25,6 +25,7 @@ const handleSubmit = async(e) =>{
   }
 
   if(json.success){
+    localStorage.setItem("userEmail",credentials.email)
     localStorage.setItem("authToken",json.authToken)
     console.log(localStorage.getItem("authToken"))
     navigate('/')
@@ -45,7 +46,7 @@ const handleSubmit = async(e) =>{
     <div>
       <div className="container">
       <form onSubmit={handleSubmit}>
-      
+      <h1 className='text-center mt-4'><strong>LOGIN</strong></h1>
   <div className="form-group mt-5">
     <label htmlFor="exampleInputEmail1">Email address</label>
     <input type="email" className="form-control bg-dark" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useDispatchCart, useCart } from './ContextReducer'
+import { type } from '@testing-library/user-event/dist/type';
 function Card(props) {
 
     let dispatch = useDispatchCart();
@@ -11,9 +12,33 @@ function Card(props) {
     const[qty,setQty]= useState(1)
 
     const handleAddToCart = async() =>{
+        let food=[]
+        for (const item of data){
+            if(item.id === props.foodItem._id){
+                food = item;
+                break;
+            }
+        }
+
+        if(food !== []){
+            if(food.size === size) {
+                // if(food.qty !== qty){
+                      await dispatch({type: 'UPDATE', id: props.foodItem._id, price: finalPrice, qty: qty})
+                      return 
+                // }
+                
+            }
+            else if(food.size !== size){
+                await dispatch({type:"ADD", id:props.foodItem._id, name:props.foodItem.name, price:finalPrice, qty:qty, size:size, img:props.foodItem.img})
+                    return
+                }
+                return
+        }
+        
         await dispatch({type:"ADD", id:props.foodItem._id, name:props.foodItem.name, price:finalPrice, qty:qty, size:size, img:props.foodItem.img})
-        console.log(data)
     }
+    
+    
     let finalPrice = qty*parseInt(options[size])
 
     useEffect(()=>{
@@ -52,6 +77,7 @@ function Card(props) {
                             </div>
                         </div>
                         <hr />
+                       
                         <button className='btn btn-success ms-2' onClick={handleAddToCart}>Add to Cart</button>
                     </div>
                 </div> 

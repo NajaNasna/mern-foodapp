@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './Screens/Login';
 import Signup from './Screens/Signup';
 import { CartProvider } from './components/ContextReducer';
+import Cart from './Screens/Cart';
 
 function App() {
   return (

@@ -37,6 +37,7 @@ function Signup() {
       <div className="container">
         <form onSubmit={handleSubmit}>
           <div className="form-group mt-5 mb-3 ">
+            <h1 className='mt-4 mb-4 text-center'><strong>SIGN UP</strong></h1>
             <label htmlFor="name">Name</label>
             <input type="text" className="form-control bg-dark" placeholder='Enter your name' name='name' value={credentials.name} onChange={onChange} />
           </div>
