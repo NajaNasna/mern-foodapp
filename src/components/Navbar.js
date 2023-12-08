@@ -34,7 +34,7 @@ function Navbar() {
         {
           localStorage.getItem("authToken") ?
           <li className="nav-item bg-success ">
-          <Link className="nav-link active text-white fs-5" aria-current="page" to="/">My Orders</Link>
+          <Link className="nav-link active text-white fs-5" aria-current="page" to="/myOrder">My Orders</Link>
         </li>
         :  " " 
         }
