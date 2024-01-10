@@ -8,10 +8,6 @@
 #carousel{
   max-height: 500px;
 }
-/* .cart-table{
-  background-color:rgb(29, 27, 27);
-
-} */
 tr,th,td{
   color: color !important;
   background-color: rgb(29, 27, 27) !important;

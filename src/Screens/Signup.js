@@ -39,22 +39,23 @@ function Signup() {
           <div className="form-group mt-5 mb-3 ">
             <h1 className='mt-4 mb-4 text-center'><strong>SIGN UP</strong></h1>
             <label htmlFor="name">Name</label>
-            <input type="text" className="form-control bg-dark" placeholder='Enter your name' name='name' value={credentials.name} onChange={onChange} />
+            <input type="text" className="form-control bg-dark" placeholder='Enter your name' name='name' value={credentials.name} 
+            onChange={onChange}  autoComplete='off'/>
           </div>
           <div className="form-group">
             <label htmlFor="exampleInputEmail1">Email address</label>
             <input type="email" className="form-control bg-dark" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"
-              name='email' value={credentials.email} onChange={onChange} />
+              name='email' value={credentials.email} onChange={onChange} autoComplete='off'/>
           </div>
           <div className="form-group mt-3">
             <label htmlFor="exampleInputPassword1">Password</label>
             <input type="password" className="form-control bg-dark" placeholder="Password" name='password'
-              value={credentials.password} onChange={onChange} />
+              value={credentials.password} onChange={onChange} autoComplete='off'/>
           </div>
           <div className="form-group mt-3">
             <label htmlFor="exampleInputPassword1">Address</label>
             <input type="text" className="form-control bg-dark" placeholder="Password" name='geolocation'
-              value={credentials.geolocation} onChange={onChange} />
+              value={credentials.geolocation} onChange={onChange} autoComplete='off'/>
           </div>
 
           <button type="submit" className="btn btn-primary mt-3">Submit</button>

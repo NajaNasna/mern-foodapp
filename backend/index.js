@@ -1,6 +1,7 @@
 var express = require('express');
+const dotenv = require("dotenv").config();
 var app = express();
-const port = 5000
+const port = process.env.port
 // const cors = require('cors')
 const mongoDB = require('./db')
 mongoDB();
@@ -11,7 +12,7 @@ app.use((req,res,next)=>{
     res.header(
         "Access-Control-Allow-Headers",
         "Origin, X-Requested-With, Content-Type, Accept"
-    );
+    ); 
     next()
 })
 

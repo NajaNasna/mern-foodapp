@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-const mongoURI = 'mongodb+srv://abc775732:najanasna12345@cluster0.jpkocsw.mongodb.net/gofoodmern?retryWrites=true&w=majority'
+const DB = process.env.DB
 
 
 const mongoDB = async () => {
     try {
-        await mongoose.connect(mongoURI);
+        await mongoose.connect(DB);
         console.log('Connected successfully');
         const  fetched_data = await mongoose.connection.db.collection("food_items");
         fetched_data.find({}).toArray().then( async (data,err)=>{
